@@ -22,7 +22,7 @@ public class alumnoData {
     }
     
     public void guardarAlumno(Alumno alumno) {
-        String sql = "INSERT INTO alumno (nombre, apellido, edad, activo) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT * INTO alumno (nombre, apellido, edad, activo) VALUES (?, ?, ?, ?)";
         try {
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, alumno.getNombre());
@@ -35,7 +35,6 @@ public class alumnoData {
                 alumno.setId(rs.getInt(1));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 
