@@ -1,17 +1,12 @@
 package conexion;
 
+import java.sql.*;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
-
-public class conexion {
+public class Conexion {
     
     private static final String URL = "jdbc:mariadb://localhost:3306/escuela";
     private static final String USER = "root";
     private static final String PASSWORD = "";
-    
     
      public Connection getConnection() {
         Connection conn = null;
